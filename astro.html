@@ -1,0 +1,179 @@
+<html>
+    
+    <head>
+<title>
+    AstrOphIle
+</title>
+
+<style>
+    body
+    {
+        background-color: black; 
+        background-image: url("milway.jpg");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    h1
+    {
+         color: #63b9dd;
+         position: relative;
+         left: 450px;
+         top: 10px;
+        
+    }
+    img
+    {
+        float: left;
+        padding: 10px;
+    }
+    p
+    {
+        color: honeydew;
+        font-size: 25px;
+    }
+    #one 
+    {
+        background-color: rgb(39, 37, 37);
+        width: 98%;
+        height: 410;
+        opacity:0.6;
+        padding: 10px;
+
+        
+    }
+    #but
+     {
+       position: relative;
+       bottom: 5px;
+       left:500px;
+     }
+    #two
+    {
+        background-color: rgb(39, 37, 37);
+        width: 98%;
+        height: 300;
+        opacity:0.6;
+        padding: 10px;
+
+        
+    }
+    iframe
+    {
+        padding:0 50px 50px 50px;
+        width:"400";
+         height:"200";
+    }
+    #info
+    {
+        padding: 30px 50px 0 50px;
+        
+    }
+    #space
+    {
+        width:300 ;
+        height:400;
+    }
+    #space:hover
+    {
+        width:400;
+        opacity: 1;
+    }
+    #one:hover
+    {
+        background-color: rgb(39, 37, 37);
+        width: 98%;
+        height: 410;
+        opacity:0.8;
+        padding: 10px;
+
+    }
+    #two:hover
+    {
+        background-color: rgb(39, 37, 37);
+        width: 98%;
+        height: 300;
+        opacity:0.8;
+        padding: 10px;
+
+    }
+    #link
+    {
+        color: blue;
+    }
+    #link:hover
+    {
+        color: rgb(124, 165, 100);
+    }
+    #i1
+    {
+        color: blue;
+    }
+    #i1:hover
+    {
+        color: rgb(124, 165, 100);
+    }
+     
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="overflow-x: hidden;">
+        <h1> A Sample Astronomy Page </h1>
+        <p>Enter your name - </p>
+        <input type="text" id="yes">
+        <button id="yep">submit</button>
+        <p id="u"></p>
+
+        <div id="one">
+       <img  id ="space" src="neowise.jpg"alt="reload">
+       <p>
+        Location of Comet NEOWISE just after sunset from July 13 to 19.<br> Face northwest at dusk, avoiding trees or buildings to have a clear view of the northwest horizon. <br>Sweep with your binoculars around the location for the comet marked on this chart. <br>Some might barely see it with the naked eye.<br> Observers at lower latitudes will see Comet NEOWISE lower in the sky, while it will appear higher<br> for observers farther north. This comet is not visible from the Southern Hemisphere.<br>  Opportunities for evening viewing will be improving in the days ahead.
+       </p>
+       
+        </div id ="3">
+        <div>
+        <p id="troll"></p>
+        <button id="but">i'm a button push me</button>
+        </div>
+
+        <div id="two">
+            <img src="black.jpg" alt="refresh">
+            <p>
+                The defining feature of a black hole is the appearance of an event horizon<br>a boundary in spacetime through which matter and light can pass only inward towards the mass of the black hole.<br> Nothing, not even light, can escape from inside the event horizon.<br> The event horizon is referred to as such because if an event occurs within the boundary, <br>information from that event cannot reach an outside observer,<br> making it impossible to determine whether such an event occurred.<br>to see beyond the event horizon <label  id ="link" onclick="doit()" >click here.</label>
+            </p>
+        </div>
+        <div>
+            <p id="info">more cool stuff here <label  id ="i1" onclick="ifr(ifr1)" >read more.</label> &emsp;&emsp;&emsp; latest atromony news  <label  id ="i1" onclick="ifr(ifr2)" >read more.</label>  </p>
+            <iframe id ="ifr1" frameborder="0" src=" https://astrogeekzco.com/"  ></iframe>
+            <iframe id ="ifr2" frameborder="0" src="https://astronomy.com/news"></iframe>
+        </div>
+    
+<script type="text/javascript">
+    
+    document.getElementById("but").onclick=function(){
+        alert("u just took orders from a button ,u DUMB !!!");
+        
+    }
+    document.getElementById("yep").onclick=function(){
+        var nEw = "";
+        nEw=document.getElementById("yes").value;
+        document.getElementById("u").innerHTML=" Hi "+nEw;
+    }
+    function doit()
+    {
+        //document.body.style.backgroundImage="none";
+        //document.body.innerText="none";
+        var show=true;
+           if(show)
+           {
+            $("body").fadeOut("slow");
+            show=false;
+           }
+    }
+    function ifr(kk)
+    {
+        $(kk).animate({width:"400px",height:"400px",
+        },900);
+    }
+</script>
+    </body>
+</html>
