@@ -25,6 +25,13 @@
     {
         float: left;
         padding: 10px;
+        opacity: 1;
+    }
+    #u
+    {
+        padding: 20px;
+        padding-left: 50px;
+
     }
     p
     {
@@ -36,7 +43,7 @@
         background-color: rgb(39, 37, 37);
         width: 98%;
         height: 410;
-        opacity:0.6;
+        opacity:0.8;
         padding: 10px;
 
         
@@ -52,7 +59,7 @@
         background-color: rgb(39, 37, 37);
         width: 98%;
         height: 300;
-        opacity:0.6;
+        opacity:0.8;
         padding: 10px;
 
         
@@ -72,6 +79,7 @@
     {
         width:300 ;
         height:400;
+        opacity: 1;
     }
     #space:hover
     {
@@ -83,7 +91,7 @@
         background-color: rgb(39, 37, 37);
         width: 98%;
         height: 410;
-        opacity:0.8;
+        opacity:1;
         padding: 10px;
 
     }
@@ -92,7 +100,7 @@
         background-color: rgb(39, 37, 37);
         width: 98%;
         height: 300;
-        opacity:0.8;
+        opacity:1;
         padding: 10px;
 
     }
@@ -112,32 +120,67 @@
     {
         color: rgb(124, 165, 100);
     }
+    
      
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     </head>
     <body style="overflow-x: hidden;">
-        <h1> A Sample Astronomy Page </h1>
-        <p>Enter your name - </p>
-        <input type="text" id="yes">
-        <button id="yep">submit</button>
-        <p id="u"></p>
+      
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-faded" style="background-color: #0c0c0c ;">
+            <a class="navbar-brand" href="#" >ASTRONOMY PAGE</a>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- <form class="form-inline">
+                
+                <input class="form-control mr-sm-2" type="text" id="yes" >
+                <button id="yep" class="btn btn-outline-success my-2 my-sm-0" type="submit">Enter Name</button>
+              </form> -->
+            </nav>
+    
+     <div id="u" style="color: aliceblue; font-size: large; font-weight: bold;"></div>
 
         <div id="one">
        <img  id ="space" src="neowise.jpg"alt="reload">
-       <p>
+       <p style="font-size:x-large;">
         Location of Comet NEOWISE just after sunset from July 13 to 19.<br> Face northwest at dusk, avoiding trees or buildings to have a clear view of the northwest horizon. <br>Sweep with your binoculars around the location for the comet marked on this chart. <br>Some might barely see it with the naked eye.<br> Observers at lower latitudes will see Comet NEOWISE lower in the sky, while it will appear higher<br> for observers farther north. This comet is not visible from the Southern Hemisphere.<br>  Opportunities for evening viewing will be improving in the days ahead.
        </p>
        
         </div id ="3">
         <div>
         <p id="troll"></p>
-        <button id="but">i'm a button push me</button>
+        <button id="but"class="btn btn-outline-success my-2 my-sm-0">i'm a button push me</button>
         </div>
 
         <div id="two">
             <img src="black.jpg" alt="refresh">
-            <p>
+            <p style="font-size:larger;">
                 The defining feature of a black hole is the appearance of an event horizon<br>a boundary in spacetime through which matter and light can pass only inward towards the mass of the black hole.<br> Nothing, not even light, can escape from inside the event horizon.<br> The event horizon is referred to as such because if an event occurs within the boundary, <br>information from that event cannot reach an outside observer,<br> making it impossible to determine whether such an event occurred.<br>to see beyond the event horizon <label  id ="link" onclick="doit()" >click here.</label>
             </p>
         </div>
@@ -153,11 +196,11 @@
         alert("u just took orders from a button ,u DUMB !!!");
         
     }
-    document.getElementById("yep").onclick=function(){
-        var nEw = "";
-        nEw=document.getElementById("yes").value;
-        document.getElementById("u").innerHTML=" Hi "+nEw;
-    }
+    // document.getElementById("yep").onclick=function(){
+    //     var nEw = "";
+    //     nEw=document.getElementById("yes").value;
+    //     document.getElementById("u").innerHTML=" Hi "+nEw;
+    // }
     function doit()
     {
         //document.body.style.backgroundImage="none";
