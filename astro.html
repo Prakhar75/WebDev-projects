@@ -40,28 +40,30 @@
     }
     #one 
     {
-        background-color: rgb(39, 37, 37);
-        width: 98%;
-        height: 410;
+        background-color: rgb(20, 18, 18);
+        width: auto;
+        height: auto;
         opacity:0.8;
         padding: 10px;
+        border-radius: 25px;
 
         
     }
     #but
      {
        position: relative;
-       bottom: 5px;
-       left:500px;
+       bottom: 10px;
+       right:-50px;
+       left:auto;
      }
     #two
     {
-        background-color: rgb(39, 37, 37);
+        background-color: rgb(20, 17, 17);
         width: 98%;
-        height: 300;
+        height: auto;
         opacity:0.8;
         padding: 10px;
-
+        border-radius: 25px;
         
     }
     iframe
@@ -78,19 +80,18 @@
     #space
     {
         width:300 ;
-        height:400;
+        height:250;
         opacity: 1;
     }
-    #space:hover
+    /* #space:hover
     {
         width:400;
         opacity: 1;
-    }
+    } */
     #one:hover
     {
-        background-color: rgb(39, 37, 37);
-        width: 98%;
-        height: 410;
+        background-color: rgb(39, 36, 36);
+        
         opacity:1;
         padding: 10px;
 
@@ -98,8 +99,6 @@
     #two:hover
     {
         background-color: rgb(39, 37, 37);
-        width: 98%;
-        height: 300;
         opacity:1;
         padding: 10px;
 
@@ -125,11 +124,13 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    </head>
+  
+
+</head>
     <body style="overflow-x: hidden;">
       
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-faded" style="background-color: #0c0c0c ;">
-            <a class="navbar-brand" href="#" >ASTRONOMY PAGE</a>
+            <a class="navbar-brand" href="#" style="font-size:x-large;font-weight: bold;" >ASTRONOMY PAGE</a>
            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -168,7 +169,7 @@
 
         <div id="one">
        <img  id ="space" src="neowise.jpg"alt="reload">
-       <p style="font-size:x-large;">
+       <p style="font-size:3.6vmin;">
         Location of Comet NEOWISE just after sunset from July 13 to 19.<br> Face northwest at dusk, avoiding trees or buildings to have a clear view of the northwest horizon. <br>Sweep with your binoculars around the location for the comet marked on this chart. <br>Some might barely see it with the naked eye.<br> Observers at lower latitudes will see Comet NEOWISE lower in the sky, while it will appear higher<br> for observers farther north. This comet is not visible from the Southern Hemisphere.<br>  Opportunities for evening viewing will be improving in the days ahead.
        </p>
        
@@ -180,14 +181,22 @@
 
         <div id="two">
             <img src="black.jpg" alt="refresh">
-            <p style="font-size:larger;">
+            <p style="font-size:3.6vmin;">
                 The defining feature of a black hole is the appearance of an event horizon<br>a boundary in spacetime through which matter and light can pass only inward towards the mass of the black hole.<br> Nothing, not even light, can escape from inside the event horizon.<br> The event horizon is referred to as such because if an event occurs within the boundary, <br>information from that event cannot reach an outside observer,<br> making it impossible to determine whether such an event occurred.<br>to see beyond the event horizon <label  id ="link" onclick="doit()" >click here.</label>
             </p>
         </div>
-        <div>
-            <p id="info">more cool stuff here <label  id ="i1" onclick="ifr(ifr1)" >read more.</label> &emsp;&emsp;&emsp; latest atromony news  <label  id ="i1" onclick="ifr(ifr2)" >read more.</label>  </p>
-            <iframe id ="ifr1" frameborder="0" src=" https://astrogeekzco.com/"  ></iframe>
-            <iframe id ="ifr2" frameborder="0" src="https://astronomy.com/news"></iframe>
+        <div class="row">
+            <div class="column">
+               <p id="info" style="font-size:3.6vmin;">more cool stuff here <label  id ="i1" onclick="ifr(ifr1)" >read more.</label>  </p>
+               <iframe id ="ifr1" frameborder="0" src=" https://astrogeekzco.com/"  ></iframe>
+            </div >
+            <div class="column">
+                <p  id="info"  style="font-size:3.6vmin;">latest atromony news  <label  id ="i1" onclick="ifr(ifr2)" >read more.</label> </p>
+                <iframe id ="ifr2" frameborder="0" src="https://astronomy.com/news"></iframe>
+            </div>
+            <div class="row">
+                <p  id="info" style="font-size:3.6vmin;">know the star that emitted light the day you were born and whose that light will<br> reach earth now so when u look at that star on that day you will see the light which is as<br> old as you are  i.e. the light that left the<br> star,on the day as you were born on  .COOL RIGHT !! <a href=" http://freeant.net/birthdaystar/home.php?lang=1"target="_blank">click here </a>to know yours  </p>
+            </div>
         </div>
     
 <script type="text/javascript">
